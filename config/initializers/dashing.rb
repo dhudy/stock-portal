@@ -11,7 +11,7 @@ Dashing.configure do |config|
   # config.redis_timeout  = 3
   config.redis_host     = 'mummichog.redistogo.com'
   config.redis_port     = '10829'
-  config.redis_password = 'bdc1586e54bb54b2f4e4e921e945f0d4'
+  config.redis_password = '847c6f7bf32ea109dfc7a89719c622c7'
   # Redis namespace when pushing new data.
   # config.redis_namespace = 'dashing_events'
 
