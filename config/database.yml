@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: dashing-portal_production
-  username: dashing-portal
-  password: <%= ENV['DASHING-PORTAL_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  # database: dashing-portal_production
+  # username: dashing-portal
+  # password: <%= ENV['DASHING-PORTAL_DATABASE_PASSWORD'] %>
