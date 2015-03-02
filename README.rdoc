@@ -1,28 +1,13 @@
-== README
+How this works:
+Refer to this (https://github.com/gottfrois/dashing-rails) page for code examples and some more explanations but heres the gist.
+-Gridster.js sets up the dashboard in apps/views/dashing/dashboards/dashboard_name.html.erb
+-Gridster defines each widget as a <li> in a <ul> and passes in data through html attributes
+-Dynamic data is sent to individual widgets using its data-id through rufus-scheduler jobs (see apps/jobs/sample.rb)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Widget JS for data manipulation can be found at apps/assets/javascripts/dashing/widgets/widget_name.coffee
+Widget HTML for data layout can be found at apps/views/dashing/widgets/widget_name.html
 
-Things you may want to cover:
+To use the generator to create a new widget type: rails g dashing:widget widget_name
+This will create blank templates for you to use
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Task notes can be found on our Trello Board.
