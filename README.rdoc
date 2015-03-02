@@ -1,13 +1,13 @@
-+How this works:
-+Refer to this (https://github.com/gottfrois/dashing-rails) page for code examples and some more explanations but heres the gist.
-+*Gridster.js sets up the dashboard in apps/views/dashing/dashboards/dashboard_name.html.erb
-+*Gridster defines each widget as a <li> in a <ul> and passes in data through html attributes
-+*Dynamic data is sent to individual widgets using its data-id through rufus-scheduler jobs (see apps/jobs/sample.rb)
-+
-+Widget JS for data manipulation can be found at apps/assets/javascripts/dashing/widgets/widget_name.coffee
-+Widget HTML for data layout can be found at apps/views/dashing/widgets/widget_name.html
-+
-+To use the generator to create a new widget type: rails g dashing:widget widget_name
-+This will create blank templates for you to use
-+
-+Task notes can be found on our Trello Board.
+How this works:
+Refer to this (https://github.com/gottfrois/dashing-rails) page for code examples and some more explanations but heres the gist.
+*Gridster.js sets up the dashboard in apps/views/dashing/dashboards/dashboard_name.html.erb
+*Gridster defines each widget as a <li> in a <ul> and passes in data through html attributes
+*Dynamic data is sent to individual widgets using its data-id through rufus-scheduler jobs (see apps/jobs/sample.rb)
+
+Widget JS for data manipulation can be found at apps/assets/javascripts/dashing/widgets/widget_name.coffee
+Widget HTML for data layout can be found at apps/views/dashing/widgets/widget_name.html
+
+To use the generator to create a new widget type: rails g dashing:widget widget_name
+This will create blank templates for you to use
+
+Task notes can be found on our Trello Board.
