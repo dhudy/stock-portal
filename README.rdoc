@@ -1,4 +1,4 @@
-How this works:\n
+How this works: <br />
 Refer to this (https://github.com/gottfrois/dashing-rails) page for code examples and some more explanations but heres the gist.
 -Gridster.js sets up the dashboard in apps/views/dashing/dashboards/dashboard_name.html.erb
 -Gridster defines each widget as a <li> in a <ul> and passes in data through html attributes
