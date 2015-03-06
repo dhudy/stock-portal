@@ -1,6 +1,6 @@
 class SignInController < ApplicationController
   def create
-    @user = User.find_or_create_from_auth_hash(auth_hash)
+    @user = User.where(uid: auth_hash[:uid], provider: auth_hash[:provider]).first_or_create
     self.current_user = @user
     redirect_to '/dashing/dashboards'
   end
