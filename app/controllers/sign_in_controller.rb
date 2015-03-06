@@ -1,4 +1,5 @@
 class SignInController < ApplicationController
+  before_action :authenticate_user!
   def create
     # raise auth_hash.inspect
     @user = User.where(email: auth_hash[:info][:email]).first_or_create
