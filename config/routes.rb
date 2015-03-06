@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'sign_in#index'
   get 'auth/facebook/callback', to: 'sign_in#create'
+  get 'auth/failure', to: 'sign_in#failure'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

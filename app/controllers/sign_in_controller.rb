@@ -5,6 +5,10 @@ class SignInController < ApplicationController
     redirect_to '/dashing/dashboards'
   end
 
+  def failure
+    raise params[:message].inspect
+  end
+
   protected
 
   def auth_hash
