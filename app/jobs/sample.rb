@@ -23,7 +23,6 @@ yahoo_stockquote_symbols = [
   'AMZN',
   'MSFT',
   'CSCO',
-  'QCOM',
   'SIE.HA'     # will become `yahoo_stock_quote_sie_ha`
 ]
 
