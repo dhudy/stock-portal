@@ -42,7 +42,7 @@ Dashing.scheduler.every '5m', first_in: 1.second.since do |job|
   else
     # read data from csv
     data = CSV.parse(response.body)
-
+    print data
     stocklist = Array.new
 
     # iterate over different stock symbols and create
