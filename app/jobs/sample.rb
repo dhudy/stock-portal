@@ -30,7 +30,7 @@ yahoo_stockquote_symbols = [
 Dashing.scheduler.every '5m', first_in: 1.second.since do |job|
 
   s = yahoo_stockquote_symbols.join(',').upcase
-  uri = URI("http://download.finance.yahoo.com/d/quotes.csv?fb=nsac1&s=#{s}")
+  uri = URI("http://finance.yahoo.com/d/quotes.csv?fb=nsac1&s=#{s}")
   response = nil
   Net::HTTP.start(uri.host, uri.port) do |http|
     request = Net::HTTP::Get.new uri.request_uri
