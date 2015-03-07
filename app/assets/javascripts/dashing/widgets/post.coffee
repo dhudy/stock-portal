@@ -1,4 +1,4 @@
-class Dashing.Facebookpost extends Dashing.Widget
+class Dashing.Post extends Dashing.Widget
 
   ready: ->
     # This is fired when the widget is done being rendered
