@@ -21,8 +21,6 @@ yahoo_stockquote_symbols = [
   'EBAY',
   'AMZN',
   'MSFT',
-  'ORCL',
-  'DELL',
   'CSCO',
   'QCOM',
   'SIE.HA'     # will become `yahoo_stock_quote_sie_ha`
