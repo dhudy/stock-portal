@@ -26,7 +26,7 @@ yahoo_stockquote_symbols = [
   'SIE.HA'     # will become `yahoo_stock_quote_sie_ha`
 ]
 
-Dashing.scheduler.every '1m', first_in: 1.second.since do |job|
+Dashing.scheduler.every '2s', first_in: 1.second.since do |job|
 
   s = yahoo_stockquote_symbols.join(',').upcase
   # http = Net::HTTP.new("download.finance.yahoo.com")
