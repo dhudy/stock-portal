@@ -26,7 +26,7 @@ yahoo_stockquote_symbols = [
   'SIE.HA'     # will become `yahoo_stock_quote_sie_ha`
 ]
 
-Dashing.scheduler.every '30s' do |job|
+Dashing.scheduler.every '1m', first_in: 1.second.since do |job|
 
   s = yahoo_stockquote_symbols.join(',').upcase
   uri = URI("http://download.finance.yahoo.com/d/quotes.csv?fb=nsac1&s=#{s}")
@@ -67,7 +67,7 @@ Dashing.scheduler.every '30s' do |job|
         widgetData[:last] = current + change
       end
       if defined?(send_event)
-        Dashing.send_event(widgetVarname, widgetData)
+        #Dashing.send_event(widgetVarname, widgetData)
       else
         print "current: #{symbol} #{current} #{change} #{widgetVarname}\n"
       end
