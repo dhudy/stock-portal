@@ -67,19 +67,9 @@ Dashing.scheduler.every '5m', first_in: 1.second.since do |job|
       if change != 0.0
         widgetData[:last] = current + change
       end
-      if defined?(send_event)
-        #Dashing.send_event(widgetVarname, widgetData)
-      else
-        print "current: #{symbol} #{current} #{change} #{widgetVarname}\n"
-      end
     end
 
     # send list to dashboard
-    if defined?(send_event)
-      Dashing.send_event('yahoo_stock_quote_list', { items: stocklist })
-    else
-      print stocklist
-    end
-
+    Dashing.send_event('yahoo_stock_quote_list', { items: stocklist })
   end
 end
