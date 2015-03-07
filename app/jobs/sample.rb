@@ -60,15 +60,6 @@ Dashing.scheduler.every '1m', first_in: 1.second.since do |job|
         label: name,
         value: current.round(2)
       })
-
-      # send single value and change to dashboard
-      widgetVarname = "yahoo_stock_quote_" + symbol.gsub(/[^A-Za-z0-9]+/, '_').downcase
-      widgetData = {
-        current: current
-      }
-      if change != 0.0
-        widgetData[:last] = current + change
-      end
     end
 
     # send list to dashboard
