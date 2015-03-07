@@ -67,7 +67,7 @@ Dashing.scheduler.every '30s' do |job|
         widgetData[:last] = current + change
       end
       if defined?(send_event)
-        send_event(widgetVarname, widgetData)
+        Dashing.send_event(widgetVarname, widgetData)
       else
         print "current: #{symbol} #{current} #{change} #{widgetVarname}\n"
       end
@@ -75,7 +75,7 @@ Dashing.scheduler.every '30s' do |job|
 
     # send list to dashboard
     if defined?(send_event)
-      send_event('yahoo_stock_quote_list', { items: stocklist })
+      Dashing.send_event('yahoo_stock_quote_list', { items: stocklist })
     else
       print stocklist
     end
