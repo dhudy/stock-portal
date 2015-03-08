@@ -13,8 +13,8 @@ class Dashing.List extends Dashing.Widget
     $(@node).fadeOut().fadeIn()
     stocks = []
     $(@node).find('.labelul').each (item, value) ->
-      console.log(value)
-      stocks.push(item.innerText)
+      console.log(value.innerText)
+      stocks.push(value.innerText)
 
     # console.log($(@node).find('.labelul'))
     # console.log($(@node).find('.valueul'))
