@@ -1,14 +1,14 @@
 <!-- Your new widget html -->
 <h1 class="stockSymbol" data-bind="stockSymbol"></h1>
 <h2 class="stockPrice" data-bind="stockPrice"></h2>
-<div class="input-group">
-  <input type="text" class="form-control" name="symbol" placeholder="Stock Symbol...">
-  <span class="input-group-btn">
-    <button class="btn btn-default" type="button">Lookup</button>
-  </span>
-</div>
-<form action="stock/view" method="get">
 
+<form action="stock/view" method="get">
+  <div class="input-group-btn">
+    <input type="text" class="form-control" name="symbol" placeholder="Stock Symbol...">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="submit">Lookup</button>
+    </span>
+  </div>
 </form>
 <form action="stock/purchase" method="get">
   # of Shares: <input type="text" name="number"><br />
