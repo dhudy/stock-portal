@@ -12,10 +12,10 @@ class Dashing.List extends Dashing.Widget
     # You can access the html node of this widget with `@node`
     $(@node).fadeOut().fadeIn()
     stocks = []
+    theValues = $(@node).find('.valueul')
     $(@node).find('.labelul').each (item, value) ->
       toAdd = value.innerText
-      value = $(@node).find('.valueul')
-      console.log(value)
+      console.log(theValues)
       toAdd = toAdd + " " + value
       stocks.push(toAdd)
 
