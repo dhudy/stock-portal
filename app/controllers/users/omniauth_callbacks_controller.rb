@@ -3,6 +3,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # puts "--#{request.env['omniauth.auth']['credentials']['token'].inspect}"
     @user = User.from_omniauth(request.env['omniauth.auth'])
     @user.auth_token = request.env['omniauth.auth']['credentials']['token']
+    @user.save
     if @user.persisted?
       sign_in @user
       set_flash_message(:notice, :success, kind: "Facebook") if is_navigational_format?
