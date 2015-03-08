@@ -2,7 +2,8 @@ require 'net/http'
 class Facebook::FacebookController < ApplicationController
   def post
     #Handle posting the post to facebook
-    puts "Retrieved the post request"
+    @graph = Koala::Facebook::API.new(current_user.auth_token)
+    @graph.put_connections("me", "feed", :message => params[:fpost])
     redirect_to '/dashing/dashboards'
   end
 
