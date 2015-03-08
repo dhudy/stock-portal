@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   get 'auth/failure', to: 'sign_in#failure'
   namespace :facebook do
     get 'post', to: 'facebook#post'
+    get 'feed', to: 'facebook#feed'
+  end
+  namespace :stock do
+    get 'lookup', to: 'stock#lookup'
+    get 'purchase', to: 'stock#purchase'
   end
 
   # Example of regular route:
