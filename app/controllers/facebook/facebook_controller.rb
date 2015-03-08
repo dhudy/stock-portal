@@ -8,7 +8,7 @@ class Facebook::FacebookController < ApplicationController
 
   def feed
     @graph = Koala::Facebook::API.new(current_user.auth_token)
-    profile = @graph.get_object("me")
+    profile = @graph.get_connections("me", "feed")
     puts "$$$$$ #{profile.inspect}"
     redirect_to '/dashing/dashboards'
   end
