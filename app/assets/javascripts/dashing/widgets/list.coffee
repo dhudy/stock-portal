@@ -14,9 +14,10 @@ class Dashing.List extends Dashing.Widget
     stocks = []
     theValues = $(@node).find('.valueul')
     $(@node).find('.labelul').each (item, value) ->
+      stockVal = theValues[item].innerText
       toAdd = value.innerText
-      console.log(theValues[item])
-      toAdd = toAdd + " " + value
+      console.log(theValues[item].innerText)
+      toAdd = toAdd + ", " + stockVal
       stocks.push(toAdd)
 
     console.log(stocks)

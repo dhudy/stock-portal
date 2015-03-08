@@ -21,9 +21,7 @@ yahoo_stockquote_symbols = [
   'ZNGA',
   'EBAY',
   'AMZN',
-  'MSFT',
-  'CSCO',
-  'SIE.HA'     # will become `yahoo_stock_quote_sie_ha`
+  'MSFT'    
 ]
 
 Dashing.scheduler.every '30s', first_in: 1.second.since do |job|
