@@ -10,16 +10,15 @@ class Dashing.List extends Dashing.Widget
   onData: (data) ->
     # Handle incoming data
     # You can access the html node of this widget with `@node`
-    $(@node).fadeOut().fadeIn()
-    stocks = []
-    theValues = $(@node).find('.valueul')
-    $(@node).find('.labelul').each (item, value) ->
-      stockVal = theValues[item].innerText
-      toAdd = value.innerText
-      console.log(theValues[item].innerText)
-      toAdd = toAdd + ", " + stockVal
-      stocks.push(toAdd)
-
-    console.log(stocks)
+    # stocks = []
+    # theValues = $(@node).find('.valueul')
+    # $(@node).find('.labelul').each (item, value) ->
+    #   stockVal = theValues[item].innerText
+    #   toAdd = value.innerText
+    #   console.log(theValues[item].innerText)
+    #   toAdd = toAdd + ", " + stockVal
+    #   stocks.push(toAdd)
+    #
+    # console.log(stocks)
     # console.log($(@node).find('.labelul'))
     # console.log($(@node).find('.valueul'))
