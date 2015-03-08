@@ -9,8 +9,7 @@ class Facebook::FacebookController < ApplicationController
   def feed
     http = Net::HTTP.new("graph.facebook.com")
     req = Net::HTTP::Get.new("/#{current_user.uid}/feed")
-    req.add_field('access_token', current_user.auth_token)
-    puts "-------Request is #{req.inspect}"
+    req.set_form_data({ access_token: current_user.auth_token })
     response = http.request(req)
     puts "%%%% #{response.inspect } %%%"
     redirect_to '/dashing/dashboards'
