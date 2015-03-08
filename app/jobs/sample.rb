@@ -29,15 +29,15 @@ yahoo_stockquote_symbols = [
 Dashing.scheduler.every '30s', first_in: 1.second.since do |job|
 
   s = yahoo_stockquote_symbols.join(',').upcase
-  # http = Net::HTTP.new("download.finance.yahoo.com")
-  # response = http.request(Net::HTTP::Get.new("/d/quotes.csv?fb=nsac1&s=#{s}"))
-  uri = URI("http://download.finance.yahoo.com/d/quotes.csv?fb=nsac1&s=#{s}")
-  response = nil
-  Net::HTTP.start(uri.host, uri.port) do |http|
-    request = Net::HTTP::Get.new uri.request_uri
-
-    response = http.request request # Net::HTTPResponse object
-  end
+  http = Net::HTTP.new("download.finance.yahoo.com")
+  response = http.request(Net::HTTP::Get.new("/d/quotes.csv?fb=nsac1&s=#{s}"))
+  # uri = URI("http://download.finance.yahoo.com/d/quotes.csv?fb=nsac1&s=#{s}")
+  # response = nil
+  # Net::HTTP.start(uri.host, uri.port) do |http|
+  #   request = Net::HTTP::Get.new uri.request_uri
+  #
+  #   response = http.request request # Net::HTTPResponse object
+  # end
   if response.code != "200"
     puts "yahoo stock quote communication error (status-code: #{response.code})\n#{response.body}"
   else
