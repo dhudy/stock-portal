@@ -7,11 +7,9 @@ class Facebook::FacebookController < ApplicationController
   end
 
   def feed
-    http = Net::HTTP.new("graph.facebook.com")
-    req = Net::HTTP::Get.new("/#{current_user.uid}/feed")
-    req.set_form_data({ access_token: current_user.auth_token })
-    response = http.request(req)
-    puts "%%%% #{response.inspect } %%%"
+    @graph = Koala::Facebook::API.new(current_user.access_token)
+    profile = @graph.get_object("me")
+    puts "$$$$$ #{profile.inspect}"
     redirect_to '/dashing/dashboards'
   end
 end
