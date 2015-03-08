@@ -12,8 +12,8 @@ class Dashing.List extends Dashing.Widget
     # You can access the html node of this widget with `@node`
     $(@node).fadeOut().fadeIn()
     stocks = []
-    $(@node).find('.labelul').each (item) ->
-      console.log(item)
+    $(@node).find('.labelul').each (item, value) ->
+      console.log(value)
       stocks.push(item.innerText)
 
     # console.log($(@node).find('.labelul'))
