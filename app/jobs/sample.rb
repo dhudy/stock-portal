@@ -21,7 +21,7 @@ yahoo_stockquote_symbols = [
   'ZNGA',
   'EBAY',
   'AMZN',
-  'MSFT'    
+  'MSFT'
 ]
 
 Dashing.scheduler.every '30s', first_in: 1.second.since do |job|
@@ -55,7 +55,8 @@ Dashing.scheduler.every '30s', first_in: 1.second.since do |job|
       # add data to list
       stocklist.push({
         label: name,
-        value: current.round(2)
+        value: current.round(2),
+        change: change
       })
     end
 
