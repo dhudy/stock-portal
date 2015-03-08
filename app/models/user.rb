@@ -11,7 +11,6 @@ class User < ActiveRecord::Base
       user.name = auth.info.name   # assuming the user model has a name
       user.image = auth.info.image # assuming the user model has an image
     end
-    puts "$$$$$ Auth Token IS: #{auth.credentials.token}"
   end
 
   def self.new_with_session(params, session)
