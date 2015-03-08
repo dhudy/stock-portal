@@ -13,7 +13,7 @@ class Dashing.List extends Dashing.Widget
     $(@node).fadeOut().fadeIn()
     stocks = []
     $(@node).find('.labelul').each (item) ->
-      console.log(item.innerText)
+      console.log(item)
       stocks.push(item.innerText)
 
     # console.log($(@node).find('.labelul'))
