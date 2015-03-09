@@ -1,12 +1,24 @@
 <!-- Your new widget html -->
-<h1 class="title" data-bind="title"></h1>
 
-<ul class="list-nostyle">
+<div class="panel panel-default">
+  <div class="panel-heading"><h1 class="title" data-bind="title"></h1></div>
+  <table class="table table-condensed">
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+    </tr>
+    <tr data-foreach-item="items">
+      <td><span class="labelul" data-bind="item.label"></span></td>
+      <td><span class="valueul" data-bind="item.value"></span></td>
+    </tr>
+  </table>
+</div>
+<!-- <ul class="list-nostyle">
   <li data-foreach-item="items">
     <span class="labelul" data-bind="item.label"></span>
     <span class="valueul" data-bind="item.value"></span>
   </li>
-</ul>
+</ul> -->
 
 <p class="more-info" data-bind="moreinfo"></p>
 <p class="updated-at" data-bind="updatedAtMessage"></p>
