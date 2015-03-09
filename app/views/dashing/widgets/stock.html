@@ -5,8 +5,18 @@
   Stock Symbol: <input type="text" class="form-control" name="symbol"><br />
   <input type="submit" class="btn btn-default" value="Lookup">
 </form>
-<form action="stock/purchase" method="get">
+<form class="form-inline">
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputSymbol">Stock Symbol</label>
+    <div class="input-group">
+      <div class="input-group-addon">Symbol</div>
+      <input type="text" class="form-control" id="exampleInputSymbol" placeholder="Symbol">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Lookup</button>
+</form>
+<!-- <form action="stock/purchase" method="get">
   # of Shares: <input type="text" class="form-control" name="number"><br />
   Cost: <label for="cost"></label><br />
   <input type="submit" class="btn btn-default" value="Purchase">
-</form>
+</form> -->
